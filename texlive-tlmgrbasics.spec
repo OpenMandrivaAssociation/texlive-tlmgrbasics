@@ -1,6 +1,6 @@
 Name:		texlive-tlmgrbasics
 Version:	60588
-Release:	1
+Release:	2
 Summary:	A simplified documentation for tlmgr
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/tlmgrbasics
