@@ -1,5 +1,5 @@
 Name:		texlive-tlmgrbasics
-Version:	68999
+Version:	70175
 Release:	1
 Summary:	A simplified documentation for tlmgr
 Group:		Publishing
