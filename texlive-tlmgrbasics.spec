@@ -3,7 +3,7 @@ Version:	70175
 Release:	1
 Summary:	A simplified documentation for tlmgr
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/tlmgrbasics
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/tlmgrbasics
 License:	gpl2+
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/tlmgrbasics.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/tlmgrbasics.doc.r%{version}.tar.xz
