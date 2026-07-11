@@ -1,36 +1,21 @@
-Name:		texlive-tlmgrbasics
-Version:	70175
+%global tl_name tlmgrbasics
+%global tl_revision 75236
+
+Name:		texlive-%{tl_name}
+Version:	%{tl_revision}
 Release:	1
 Summary:	A simplified documentation for tlmgr
 Group:		Publishing
-URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/tlmgrbasics
+URL:		https://www.ctan.org/tex-archive/info/tlmgrbasics
 License:	gpl2+
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/tlmgrbasics.r%{version}.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/tlmgrbasics.doc.r%{version}.tar.xz
+Source0:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/tlmgrbasics.r%{tl_revision}.tar.xz
+Source1:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/tlmgrbasics.doc.r%{tl_revision}.tar.xz
 BuildArch:	noarch
-BuildRequires:	texlive-tlpkg
-Requires(pre):	texlive-tlpkg
-Requires(post):	texlive-kpathsea
+BuildSystem:	texlive
+Provides:	texlive(%{tl_name}) = %{tl_revision}
 
 %description
-This package provides simplified documentation for tlmgr, the
-TeX Live Manager. It describes the most commonly-used actions
-and options in a convenient format.
+This package provides simplified documentation for tlmgr, the TeX Live
+Manager. It describes the most commonly-used actions and options in a
+convenient format.
 
-%prep
-%autosetup -p1 -c -a1
-
-%build
-
-%install
-rm -rf tlpkg
-mkdir -p %{buildroot}%{_texmfdistdir}
-cp -a * %{buildroot}%{_texmfdistdir}
-
-%files
-%doc %{_texmfdistdir}/doc/support/tlmgrbasics
-
-%post -p %{_sbindir}/texlive.post
-
-%postun
-[ "$1" -eq 0 ] && %{_sbindir}/texlive.post
