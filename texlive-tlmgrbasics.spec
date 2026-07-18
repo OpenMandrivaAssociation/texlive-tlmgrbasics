@@ -1,5 +1,5 @@
 %global tl_name tlmgrbasics
-%global tl_revision 75236
+%global tl_revision 79665
 
 Name:		texlive-%{tl_name}
 Version:	%{tl_revision}
